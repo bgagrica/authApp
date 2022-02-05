@@ -12,7 +12,7 @@ route.use(express.urlencoded({ extended: true }));
 
 
 
-route.post('/register', (req, res) => {
+route.post('/api_register', (req, res) => {
     
 
     const sema = Joi.object().keys({
@@ -61,7 +61,7 @@ route.post('/register', (req, res) => {
 
 });
 
-route.post('/login', (req, res) => {
+route.post('/api_login', (req, res) => {
    
     Users.findOne({ where: { name: req.body.name } })
         .then( usr => {
