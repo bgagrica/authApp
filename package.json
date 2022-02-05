@@ -4,8 +4,7 @@
   "description": "",
   "main": "appCrud.js",
   "scripts": {
-  
-    "start": "nodemon ./appAuth.js"
+    "start": "node ./appAuth.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +19,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^7.0.0-alpha.2",
     "socket.io": "^4.4.1"
   },
