@@ -26,6 +26,6 @@ app.use('/admin', usrMsgs)
 
 
 
-app.listen({ port: 3000 }, async () => {
+app.listen({ port: process.env.PORT || 3000 }, async () => {
     await sequelize.authenticate();
 });
