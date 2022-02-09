@@ -46,7 +46,9 @@ route.post('/api_register', (req, res) => {
 
                 const usr = {
                     userId: rows.id,
-                    user: rows.name
+                    user: rows.name,
+                    canMakeBlogs: rows.canMakeBlogs,
+                    role: rows.role,
                 };
         
                 const token = jwt.sign(usr, process.env.ACCESS_TOKEN_SECRET);
