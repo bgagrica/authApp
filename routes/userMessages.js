@@ -29,8 +29,10 @@ route.post('/api_register', (req, res) => {
             res.send('Parameters not valid')
         else {
             var canmakeblogs = false
-            if(req.body.role == 'admin' || req.body.role=='moderator')
+            if(req.body.role == 'admin' || req.body.role=='moderator'){
                 canmakeblogs = true
+            }
+                
               const obj = { 
                     name:req.body.name,
                     email:req.body.email,
@@ -45,8 +47,8 @@ route.post('/api_register', (req, res) => {
             Users.create(obj).then( rows => {
 
                 const usr = {
-                    userId: rows.id,
-                    user: rows.name,
+                    id: rows.id,
+                    name: rows.name,
                     canMakeBlogs: rows.canMakeBlogs,
                     role: rows.role,
                 };
